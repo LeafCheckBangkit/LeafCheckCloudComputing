@@ -1,0 +1,23 @@
+{
+  "name": "leafcheckcloudcomputing",
+  "version": "1.0.0",
+  "description": "This Repository is for [C241-PS391] Bangkit Academy 2024 CAPSTONE PROJECT.\r especially for Cloud Computing things.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon ./src/server/server.js",
+    "start": "node ./src/server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/firestore": "^7.7.0",
+    "@hapi/hapi": "^21.3.9",
+    "@tensorflow/tfjs": "^4.19.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.2"
+  }
+}
