@@ -1,5 +1,5 @@
 const tf = require('@tensorflow/tfjs-node');
-const InputError = require('../exceptions/inputError');
+const inputError = require('../exceptions/inputError.js');
 
 async function predictClassification(model, image) {
   try {

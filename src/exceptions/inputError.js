@@ -1,4 +1,4 @@
-const clientError = require("../exceptions/clientError");
+const clientError = require("../exceptions/clientError.js");
 
 class inputError extends clientError {
     constructor(message) {
