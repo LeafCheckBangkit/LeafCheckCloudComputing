@@ -9,7 +9,7 @@
     "start": "node ./src/server/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "C241-PS391",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/firestore": "^7.7.0",

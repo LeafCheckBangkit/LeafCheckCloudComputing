@@ -10,17 +10,18 @@ async function postPredictHandler(request, h) {
   const id = crypto.randomUUID();
   const createdAt = new Date().toISOString();
 
+  //Data apa aja yang mau dimasukkan ke dalam firestore.
   const data = {
     "id": id,
     "result": label,
     "explanation": explanation,
     "suggestion": suggestion,
-    "confidenceScore": confidenceScore,
     "createdAt": createdAt
   }
 
   await storeData(id,data);
 
+  //RESPONSE Buat ngasihtau berhasil di deteksi atau enggak
   const response = h.response({
     status: 'success',
     message: confidenceScore > 99 ? 'Model is predicted successfully.' : 'Model is predicted successfully but under threshold. Please use the correct picture',

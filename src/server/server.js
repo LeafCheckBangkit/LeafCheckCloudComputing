@@ -5,6 +5,7 @@ const routes = require('../server/routes');
 const loadModel = require('../services/loadModel');
 const InputError = require('../exceptions/inputError');
 
+//Start hapi server di 0.0.0.0
 (async () => {
     const server = Hapi.server({
         port: 8000,
@@ -16,6 +17,7 @@ const InputError = require('../exceptions/inputError');
         },
     });
 
+    //Model belum ada, bisa ditambahkan di .env nya.
     const model = await loadModel();
     server.app.model = model;
 
@@ -26,6 +28,7 @@ const InputError = require('../exceptions/inputError');
     server.ext('onPreResponse', function (request, h) {
         const response = request.response;
 
+        // Error jika foto tidak di detekdi daun sama sekali.
         if (response instanceof InputError) {
             const newResponse = h.response({
                 status: 'fail',
@@ -35,6 +38,7 @@ const InputError = require('../exceptions/inputError');
             return newResponse;
         }
 
+        //
         if (response.isBoom) {
             const newResponse = h.response({
                 status: 'fail',

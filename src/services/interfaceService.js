@@ -13,7 +13,9 @@ async function predictClassification(model, image) {
     const score = await prediction.data();
     const confidenceScore = Math.max(...score) * 100;
 
-    const classes = ['Melanocytic nevus', 'Squamous cell carcinoma', 'Vascular lesion'];
+
+    //Kelasnya ada apa aja.
+    const classes = ['Healthy', 'Squamous cell carcinoma', 'Vascular lesion'];
 
     const classResult = tf.argMax(prediction, 1).dataSync()[0];
     const label = classes[classResult];
