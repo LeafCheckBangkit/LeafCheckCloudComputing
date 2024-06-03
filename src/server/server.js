@@ -1,9 +1,9 @@
 require('dotenv').config();
 
 const Hapi = require('@hapi/hapi');
-const routes = require('../server/routes');
-const loadModel = require('../services/loadModel');
-const InputError = require('../exceptions/inputError');
+const routes = require('../server/routes.js');
+const loadModel = require('../services/loadModel.js');
+const InputError = require('../exceptions/inputError.js');
 
 //Start hapi server di 0.0.0.0
 (async () => {
@@ -38,7 +38,7 @@ const InputError = require('../exceptions/inputError');
             return newResponse;
         }
 
-        //
+        //kalo error ke handle
         if (response.isBoom) {
             const newResponse = h.response({
                 status: 'fail',

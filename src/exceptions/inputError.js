@@ -1,10 +1,10 @@
-const ClientError = require("../exceptions/clientError");
+const clientError = require("../exceptions/clientError");
 
-class InputError extends ClientError {
+class inputError extends clientError {
     constructor(message) {
         super(message);
-        this.name = 'InputError';
+        this.name = 'inputError';
     }
 }
 
-module.exports = InputError;
+module.exports = inputError;
