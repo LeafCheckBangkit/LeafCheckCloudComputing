@@ -22,14 +22,11 @@ const InputError = require('../exceptions/inputError.js');
     server.app.model = model;
 
     server.route(routes);
-
-    //ON-PRERESPONSE FUNCTION, FOR HANDLING THE ERROR BEFORE IT BEGINS.
-    //THIS MACHINE WILL RUN THIS ALLL FIRST.
     server.ext('onPreResponse', function (request, h) {
         const response = request.response;
 
         // Error jika foto tidak di detekdi daun sama sekali.
-        if (response instanceof InputError) {
+        if (response instanceof inputError) {
             const newResponse = h.response({
                 status: 'fail',
                 message: `${response.message} Silakan gunakan foto lain.`
