@@ -1,0 +1,6 @@
+runtime: nodejs18
+
+service: login-api
+
+env_variables:
+  PORT: 3000
