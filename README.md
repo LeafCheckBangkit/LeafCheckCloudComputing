@@ -15,19 +15,9 @@ The service available:
   <pre>PUT  /authentications</pre>
 
 - Predictions
-  <pre>POST /predictions/cassava</pre>
-  <pre>POST /predictions/rice</pre>
-  <pre>POST /predictions/tomato</pre>
+  <pre>POST /predict</pre>
   
-# Quick Look
-
-## Architecture
-
-<p align="center">
-  <img src="image/cloud architecture.png" alt="Konva logo" />
-</p>
-
-# Authentications
+# NOTE
 
 This service is using token for authentication. You should have an account to access this service. First if you don't have an account, create a new account. Then, create a token for authentication. It's like login, you need to authenticate yourself with username and password. If the autentication is valid, you will get a token. You can use this token to access the service. If dont, you will get a error message. 
 
