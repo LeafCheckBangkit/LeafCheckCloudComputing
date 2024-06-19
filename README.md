@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="image/TanamIn.png" alt="Konva logo" height="180" />
-</p>
-
 <h1 align="center">LeafCheck</h1>
 
 <div align="center">
