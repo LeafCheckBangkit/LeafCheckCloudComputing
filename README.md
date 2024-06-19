@@ -6,8 +6,9 @@
 LeafCheck is a web services that aimed at revolutionizing crop disease diagnosis by leveraging machine learning algorithms to analyze leaf images for disease detection. With a backend powered by Google Cloud Run and a database hosted on Google Cloud Storage, LeafCheck offers users a seamless and efficient platform for identifying plant diseases and providing appropriate solutions.
 The first thing you need to know is that this service is using authentication to access each service. You need to login to access the service. The login is using username and password. You can register on the registration service. Please don't spam the registration service because it will make the registration service slow. If you have some idea to secure this service, please contact me.
 
+-------------------------------------------------------
 > Base url of this service is: http://localhost:8080/
-
+-------------------------------------------------------
 The service available:
 
 - Authentications
