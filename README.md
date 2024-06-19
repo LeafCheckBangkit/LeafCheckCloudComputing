@@ -11,8 +11,8 @@ The first thing you need to know is that this service is using authentication to
 The service available:
 
 - Authentications
-  <pre>POST /authentications</pre>
-  <pre>PUT  /authentications</pre>
+  <pre>POST /login</pre>
+  <pre>POST /register</pre>
 
 - Predictions
   <pre>POST /predict</pre>
